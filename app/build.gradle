@@ -24,7 +24,9 @@ android {
         }
     }
 }
-
+repositories {
+    maven { url 'https://jitpack.io' }
+}
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation"org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
@@ -33,6 +35,6 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.0'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.0'
-    compile project(':annotations')
-    kapt project(':compiler')
+//    implementation 'com.github.gilgoldzweig:AutoDSLTest:0.01'
+//    kapt 'com.github.gilgoldzweig.AutoDSLTest:compiler:0.01'
 }
